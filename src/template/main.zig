@@ -9,11 +9,11 @@ pub fn main() !void {
 }
 
 fn solution(input: []const u8) !u32 {
-    var lines = std.mem.split(u8, input, "\n");
+    var lines = std.mem.splitAny(u8, input, "\n");
 
     var counter = 0;
 
-    while (lines.next()) {
+    while (lines.next() != null) {
         counter += 1;
     }
 
@@ -21,11 +21,11 @@ fn solution(input: []const u8) !u32 {
 }
 
 fn solution2(input: []const u8) !u32 {
-    var lines = std.mem.split(u8, input, "\n");
+    var lines = std.mem.splitAny(u8, input, "\n");
 
     var counter = 0;
 
-    while (lines.next()) {
+    while (lines.next() != null) {
         counter += 1;
     }
 
